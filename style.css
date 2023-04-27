@@ -419,7 +419,7 @@ footer {
       transform: rotateX(45deg);
     }
   } */
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 480px) {
   #about .page_text {
     height: 25%;
     justify-content: space-around;
@@ -428,7 +428,7 @@ footer {
     font-size: 19px;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 480px) {
   #link_menu {
     display: inline-block;
     color: #fff;
