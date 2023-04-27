@@ -23,23 +23,23 @@ function scrollHandler() {
   const inner_width = window.innerWidth;
   links.forEach((link) => {
     link.style.color =
-      inner_width <= 420 ? "#fff" : about_top > 0 ? "#fff" : "#000";
+      inner_width <= 480 ? "#fff" : about_top > 0 ? "#fff" : "#000";
   });
   console.log(links);
   if (home_bottom > 0)
-    inner_width <= 420
+    inner_width <= 480
       ? (links[0].style.color = "#ffff00")
       : navClassScrollHandler(links[0]);
   else if (about_bottom > 0)
-    inner_width <= 420
+    inner_width <= 480
       ? (links[1].style.color = "#ffff00")
       : navClassScrollHandler(links[1]);
   else if (donate_bottom > 0)
-    inner_width <= 420
+    inner_width <= 480
       ? (links[2].style.color = "#ffff00")
       : navClassScrollHandler(links[2]);
   else if (contact_bottom > 0)
-    inner_width <= 420
+    inner_width <= 480
       ? (links[3].style.color = "#ffff00")
       : navClassScrollHandler(links[3]);
 }
@@ -71,7 +71,7 @@ function linkDrawer() {
 window.addEventListener("resize", function () {
   links.forEach((n) => (n.style.color = "#fff"));
   document.getElementById("nav_links").style.display =
-    window.innerWidth >= 420 ? "flex" : linkVisible ? "none" : "flex";
+    window.innerWidth >= 480 ? "flex" : linkVisible ? "none" : "flex";
 });
 
 // scroll reveal --------
