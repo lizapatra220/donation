@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,6 +36,9 @@ body::-webkit-scrollbar {
 .logo img {
   height: 100%;
   object-fit: contain;
+}
+#link_menu {
+  display: none;
 }
 .navbar ul {
   list-style: none;
@@ -66,9 +69,12 @@ section {
 #home {
   position: relative;
   padding-top: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .home img {
-  position: relative;
+  position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -79,14 +85,15 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  z-index: 1;
+  /* position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50%; */
   color: #ffffff;
   font-weight: 500;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   width: 100%;
-  margin-top: 5%;
+  margin-bottom: 5%;
 }
 .home_text h1 {
   font-size: 45px;
@@ -150,16 +157,13 @@ section {
     width: 100%;
   }
 }
-.page_header:hover hr {
-  /* width: 10%; */
-}
 .page_body {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 30px 50px;
+  padding: 2% 50px;
 }
 .page_image {
   height: 100%;
@@ -179,7 +183,6 @@ section {
   justify-content: center;
   align-items: center;
   width: 40%;
-  gap: 25px;
 }
 .page_text h1 {
   /* border-bottom: 2px solid #000; */
@@ -190,7 +193,8 @@ section {
   color: rgb(104, 99, 99);
 }
 .page_text p {
-  color: rgb(104, 99, 99);
+  /* color: rgb(104, 99, 99); */
+  color: #000;
 }
 /* ------------------------------- */
 .about {
@@ -216,6 +220,7 @@ section {
 .donate_text {
   align-items: flex-start;
   padding-left: 70px;
+  height: 25%;
 }
 .donate_text h1 {
   border-bottom: none;
@@ -250,6 +255,7 @@ button {
 }
 .contact_form {
   padding: 0;
+  gap: 0;
 }
 input:focus,
 textarea:focus,
@@ -298,6 +304,10 @@ button:hover {
   border-radius: 20px;
   transform-origin: center;
   object-position: 0 0;
+}
+.face5 img {
+  transform: rotateY(180deg);
+  object-position: -90px 0;
 }
 .face1 {
   transform: translateZ(36.373vh);
@@ -409,3 +419,89 @@ footer {
       transform: rotateX(45deg);
     }
   } */
+@media screen and (min-width: 420px) {
+  #about .page_text {
+    height: 25%;
+    justify-content: space-around;
+  }
+  #about .page_text p {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #link_menu {
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+  }
+  #link_menu:hover {
+    cursor: pointer;
+  }
+  #nav_links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 8vh;
+    right: 5%;
+    background-color: #001b2055;
+    height: fit-content;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+  nav a {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .active {
+    border-bottom: none;
+  }
+  #home img {
+    object-position: 87% 0px;
+  }
+  .home_text h1 {
+    font-size: 24px;
+    margin-bottom: 45%;
+  }
+  .home_text h1 span {
+    font-size: 27px;
+  }
+  .page_body {
+    flex-direction: column;
+  }
+  .page_image,
+  .page_text {
+    height: 48%;
+    width: 100%;
+  }
+  .page_image {
+    height: 46%;
+  }
+  .page_text h1 {
+    margin-bottom: 5px;
+  }
+  #about .page_text p {
+    font-size: 15px;
+  }
+  .contact_cube {
+    display: none;
+  }
+  #donate .page_body {
+    flex-direction: column-reverse;
+  }
+  #donate .page_text {
+    padding: 0;
+    gap: 5%;
+  }
+  .contact_form {
+    height: 80%;
+    width: 100%;
+  }
+  .contact_form input,
+  .contact_form textarea,
+  .contact_form button {
+    width: 100%;
+  }
+  .footer_link {
+    width: 50%;
+  }
+}
